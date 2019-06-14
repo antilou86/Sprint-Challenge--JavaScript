@@ -29,14 +29,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+.map will return a new array with your specified changes on each item within, .forEach will mutate each item in an existing array.
 
 2. What is the difference between a function and a method?
+a method is a function that is part of a class, or is considered a property of an object.  this is cool because a method can be inherited throughout classes.
 
 3. What is closure?
+I think of closure in terms of scope. it is javascripts way of sectioning off blocks of code and limiting a function's access to other blocks with {curly braces}. a function can access variable definitions within it's own curly braces, and the braces of the block it was created in, and nothing more. furthermore, a function can't reach in to another function's code block from the outside. 
 
 4. Describe the four rules of the 'this' keyword.
+_window binding - when use in the global scope 'this' means all of javascript.
+_implicit binding- refers to whichever function or object it is called in. for example - in myArray if i ran a function containing 'this.map' 'this' would refer to myArray. 
+_new binding- used in constructor functions as a way to pass properties up a class chain.  in each class it refers to the class that is currently instantiated 
+_explicit binding- altering the current meaning of 'this' in an object using  .call or .apply (WHAT IS THE MEANING OF THIS?!)  
 
 5. Why do we need super() in an extended class?
+super() is what acts as your .call prototype, and passes any new property definitions up the class chain. without it, any new methods/functions created in the parent class wouldnt work when called on a child class because the parent doesnt have access to the properties within the child.  
 
 ## Project Set up
 

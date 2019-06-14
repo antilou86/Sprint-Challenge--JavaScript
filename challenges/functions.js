@@ -6,20 +6,24 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-const consume = function (a, b, callbackFunction) {
-  return callbackFunction(a, b);
+function consume(a, b, cb) {
+  return cb(a, b);
   };
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-const add = () => {
-  callbackFunction;
-  a + b
+function add (num1, num2) {
+  console.log((num1 + num2))
 };
-const multiply = () => {callbackFunction(a * b)};
-const greeting = () => {return callbackFunction(`Hello ${a} ${b}, nice to meet you!`)}
+
+const multiply = (numa, numb) => {
+  console.log( (numa * numb))
+};
+
+const greeting = (param1, param2) => {
+ console.log( (`Hello ${param1} ${param2}, nice to meet you!`))};
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
